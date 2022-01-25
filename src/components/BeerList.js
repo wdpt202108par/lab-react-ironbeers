@@ -8,7 +8,7 @@ class BeerList extends React.Component {
     return (
       <div>
         <Header />
-        {this.props.beers.map(beer => <Beer key={beer._id} name={beer.name} img={beer.image_url} tagline={beer.tagline} contributor={beer.contributed_by} />)}
+        {this.props.beers.map(beer => <Beer key={beer._id} id={beer._id} name={beer.name} img={beer.image_url} tagline={beer.tagline} contributor={beer.contributed_by} />)}
       </div>
     );
   }
