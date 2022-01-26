@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Allbeers from './components/Allbeers';
 import Navbar from './components/Navbar';
 import BeerDetails from './components/Beerdetails';
+import Randombeer from './components/Randombeer';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Navbar />
           <Route exact path="/beers" component={Allbeers} />
           <Route path="/beers/:_id" component={BeerDetails} />
-          {/* <Route path="/random-beer" component={Randombeer} /> */}
+          <Route path="/random-beer" component={Randombeer} />
           {/* <Route path="/new-beer" component={Newbeer} /> */}
         </>
       </Switch>

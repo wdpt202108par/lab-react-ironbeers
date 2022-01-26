@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import reactRouterDom from 'react-router-dom';
 
 class Beerdetails extends React.Component {
   state = {};
