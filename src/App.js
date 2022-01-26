@@ -7,9 +7,9 @@ import Allbeers from './components/Allbeers';
 function App() {
   return (
     <div className="App">
-      <Homepage />
       <Switch>
         <Route path="/beers" component={Allbeers} />
+        <Route exact path="/" component={Homepage} />
         {/* <Route path="/random-beer" component={Randombeer} /> */}
         {/* <Route path="/new-beer" component={Newbeer} /> */}
       </Switch>

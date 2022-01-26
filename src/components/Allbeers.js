@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Allbeers extends React.Component {
   state = { Listallbeers: [] };
@@ -20,7 +21,10 @@ class Allbeers extends React.Component {
           return (
             <div key={eachbeer._id}>
               <img src={eachbeer.image_url} />
-              <h2>{eachbeer.name}</h2>
+              <h2>
+                <Link to={`/beers/${eachbeer._id}`}>{eachbeer.name}</Link>
+              </h2>
+
               <h3>{eachbeer.tagline}</h3>
               <p>created by: {eachbeer.contributed_by}</p>
             </div>
