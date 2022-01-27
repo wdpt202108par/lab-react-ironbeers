@@ -46,7 +46,7 @@ class Newbeer extends React.Component {
 
   render() {
     return (
-      <>
+      <div className='form'>
         <form onSubmit={this.handleFormSubmit}>
           <label>Name </label>
           <input
@@ -98,7 +98,7 @@ class Newbeer extends React.Component {
           />
           <button>ADD NEW</button>
         </form>
-      </>
+      </div>
     );
   }
 }

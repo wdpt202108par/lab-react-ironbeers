@@ -37,17 +37,23 @@ class Allbeers extends React.Component {
 
     return (
       <>
-        <input className='search' type="text" name="query" placeholder="Search" value={this.query} onChange={this.handleChange} />
+        <div className='searchparent'>
+          <input className='search' type="text" name="query" placeholder="Search" value={this.query} onChange={this.handleChange} />
+        </div>
         {filteredBeers.map((eachbeer) => {
           return (
-            <div key={eachbeer._id}>
-              <img src={eachbeer.image_url} alt='beerpic' />
-              <h2>
-                <Link to={`/beers/${eachbeer._id}`}>{eachbeer.name}</Link>
-              </h2>
+            <div className='allbeers' key={eachbeer._id}>
+              <div className="beerimg">
+                <img src={eachbeer.image_url} alt="beerpic"/>
+              </div>
 
-              <h3>{eachbeer.tagline}</h3>
-              <p>created by: {eachbeer.contributed_by}</p>
+              <div>
+                <h1>
+                  <Link className='allbeerslink' to={`/beers/${eachbeer._id}`}>{eachbeer.name}</Link>
+                </h1>
+                <h3>{eachbeer.tagline}</h3>
+                <p><b>Created by:</b> {eachbeer.contributed_by}</p>
+              </div>
             </div>
           );
         })}

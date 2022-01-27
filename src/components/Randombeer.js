@@ -19,15 +19,23 @@ class Randombeer extends React.Component {
 
   render() {
     return (
-      <>
-        <img src={this.state.image_url} alt="beerpick"></img>
-        <h1>{this.state.name}</h1>
-        <h2>{this.state.tagline} </h2>
-        <p>{this.state.first_brewed}</p>
-        <p>{this.state.attenuation_level}</p>
-        <p>{this.state.description}</p>
-        <p>{this.state.contributed_by}</p>
-      </>
+      <div className='beer-details'>
+          <img src={this.state.image_url} alt="beerpic"/>
+
+          <div className='details'>
+            <h1>{this.state.name}</h1>
+            <p className='level'>{this.state.attenuation_level}</p>
+          </div>
+
+          <div className='details'>
+            <h2>{this.state.tagline}</h2>
+            <p className='brewed'>{this.state.first_brewed}</p>
+          </div>
+          
+          <p>{this.state.description}</p>
+          <p className='by'>{this.state.contributed_by}</p>
+
+        </div>
     );
   }
 }
