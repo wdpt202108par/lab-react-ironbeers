@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-
+import Beer from './beer';
+import Random from './randombeer';
+import NewBeer from './newbeer';
+import { Link } from 'react-router-dom';
 
 class Homepage extends Component{
 
@@ -8,9 +11,9 @@ render(){
       return(
           <div>
                 <ul>
-                <li><Link to={'/beers'}>Beers</Link></li>
-                <li><Link to={'/random-beer'}>Random Beer</Link></li>
-                <li><Link to={'/new-beer'}>New Beer</Link></li>
+                <li><Link to= '/beer'>Beer</Link></li>
+                <li><Link to= '/randombeer'>Random Beer</Link></li>
+                <li><Link to= '/newbeer'>New Beer</Link></li>
                 </ul>
             </div>
         )
@@ -18,3 +21,5 @@ render(){
 }
 
 export default Homepage;
+
+
