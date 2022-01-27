@@ -48,54 +48,67 @@ class Newbeer extends React.Component {
     return (
       <div className='form'>
         <form onSubmit={this.handleFormSubmit}>
-          <label>Name </label>
+          <label>Name 
           <input
             type="text"
             name="name"
             value={this.state.name}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Tagline </label>
+          </label>
+
+          <label>Tagline 
           <input
             type="text"
             name="tagline"
             value={this.state.tagline}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Description </label>
+          </label>
+
+          <label>Description 
           <textarea
             name="description"
             value={this.state.description}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>First brewed </label>
+          </label>
+
+          <label>First brewed 
           <input
             type="text"
             name="first_brewed"
             value={this.state.first_brewed}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Brewers tips </label>
+          </label>
+
+          <label>Brewers tips 
           <input
             type="text"
             name="brewers_tips"
             value={this.state.brewers_tips}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Attenuation level </label>
+          </label>
+
+          <label>Attenuation level 
           <input
             type="number"
             name="attenuation_level"
             value={this.state.attenuation_level}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Contributed by </label>
+          </label>
+
+          <label>Contributed by 
           <input
             type="text"
             name="contributed_by"
             value={this.state.contributed_by}
             onChange={(e) => this.handleChange(e)}
           />
+          </label>
           <button>ADD NEW</button>
         </form>
       </div>
