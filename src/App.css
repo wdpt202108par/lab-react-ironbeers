@@ -44,3 +44,7 @@
 nav {
   background-color:#61dafb;
 }
+
+.beer-container img {
+  width: 10%;
+}
