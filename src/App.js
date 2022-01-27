@@ -4,6 +4,7 @@ import axios from "axios";
 import Home from "./components/Home";
 import BeerList from "./components/BeerList";
 import SingleBeer from "./components/SingleBeer";
+import RandomBeer from "./components/RandomBeer";
 import './App.css';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
   getAllBeers = () => {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
       .then(responseFromApi => {
-        console.log("responseFromApi 👇", responseFromApi.data);
+        console.log("Beers 👇", responseFromApi.data);
 
         this.setState({
           beers: responseFromApi.data
@@ -34,6 +35,7 @@ class App extends Component {
         <Route exact path="/" component={Home} />
         <Route exact path="/beers" render={(routerProps) => <BeerList {...routerProps} beers={this.state.beers} />} />
         <Route path="/beers/:beerId" render={(routerProps) => <SingleBeer {...routerProps} beers={this.state.beers} />} />
+        <Route path="/random-beer" component={RandomBeer}/>
       </Switch>
       </div>
     );

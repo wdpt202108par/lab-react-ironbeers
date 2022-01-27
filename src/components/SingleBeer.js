@@ -8,9 +8,10 @@ class SingleBeer extends Component {
   }
 
   render() {
-    const beer = this.getBeerDetails(this.props.match.params.beerId)
+    const beerId = this.props.id ? this.props.id : this.props.match.params.beerId;
+    const beer = this.getBeerDetails(beerId);
 
-    if (!beer) return "Loading... 🏋️‍♀️"
+    if (!beer) return <div>Loading</div>;
 
     return(
       <div>
