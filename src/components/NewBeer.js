@@ -3,13 +3,13 @@ import axios from "axios";
 
 class NewBeer extends Component {
   state = {
-    name: null,
-    tagline: null,
-    description: null,
-    first_brewed: null,
-    brewers_tips: null,
+    name: "",
+    tagline: "",
+    description: "",
+    first_brewed: "",
+    brewers_tips: "",
     attenuation_level: null,
-    contributed_by: null
+    contributed_by: ""
   }
 
   handleChange = (event) => {
@@ -22,13 +22,24 @@ class NewBeer extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const { name, value } = this.state;
 
     axios.post("https://ih-beers-api2.herokuapp.com/beers/new", {
-      [name]: value
+      name: this.state.name,
+      tagline: this.state.tagline,
+      description: this.state.description,
+      first_brewed: this.state.first_brewed,
+      brewers_tips: this.state.brewers_tips,
+      attenuation_level: this.state.attenuation_level,
+      contributed_by: this.state.contributed_by
       })
       .then(() => this.setState({
-        [name]: null
+        name: "",
+        tagline: "",
+        description: "",
+        first_brewed: "",
+        brewers_tips: "",
+        attenuation_level: null,
+        contributed_by: ""
       }))
   }
 
