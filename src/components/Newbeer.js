@@ -11,6 +11,7 @@ class Newbeer extends React.Component {
     attenuation_level: '',
     contributed_by: '',
   };
+
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
@@ -18,15 +19,7 @@ class Newbeer extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const {
-      name,
-      tagline,
-      description,
-      first_brewed,
-      brewers_tips,
-      attenuation_level,
-      contributed_by,
-    } = this.state;
+    const {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by} = this.state;
     axios
       .post(`https://ih-beers-api2.herokuapp.com/beers/new`, {
         name,
@@ -47,55 +40,56 @@ class Newbeer extends React.Component {
           attenuation_level: '',
           contributed_by: '',
         });
-      });
+      })
+      .catch(err => console.log(err))
   };
+
   render() {
     return (
       <>
         <form onSubmit={this.handleFormSubmit}>
-          <label>Name: </label>
+          <label>Name </label>
           <input
             type="text"
             name="name"
             value={this.state.name}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Tagline: </label>
+          <label>Tagline </label>
           <input
             type="text"
             name="tagline"
             value={this.state.tagline}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Description: </label>
-          <input
-            type="text"
+          <label>Description </label>
+          <textarea
             name="description"
             value={this.state.description}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>First brewed: </label>
+          <label>First brewed </label>
           <input
             type="text"
             name="first_brewed"
             value={this.state.first_brewed}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Brewers tips: </label>
+          <label>Brewers tips </label>
           <input
             type="text"
             name="brewers_tips"
             value={this.state.brewers_tips}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Attenuation level: </label>
+          <label>Attenuation level </label>
           <input
             type="number"
             name="attenuation_level"
             value={this.state.attenuation_level}
             onChange={(e) => this.handleChange(e)}
           />
-          <label>Contributed by: </label>
+          <label>Contributed by </label>
           <input
             type="text"
             name="contributed_by"

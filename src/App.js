@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Homepage from './homepage';
+import Homepage from './components/Homepage';
 import { Switch, Route } from 'react-router-dom';
 import Allbeers from './components/Allbeers';
 import Navbar from './components/Navbar';

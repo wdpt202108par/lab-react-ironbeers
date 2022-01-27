@@ -3,24 +3,45 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class Allbeers extends React.Component {
-  state = { Listallbeers: [] };
+  state = { 
+    listallbeers: [],
+    query:'',
+  };
+
   getAllbeers = () => {
     axios.get('https://ih-beers-api2.herokuapp.com/beers').then((response) => {
+      //console.log(response.data)
       this.setState({
-        Listallbeers: response.data,
+        listallbeers: response.data,
       });
-    });
+    })
+    .catch(err => console.log(err))
   };
+
+  handleChange = (event) => {
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${event.target.value}`)
+    .then((response) => {
+      this.setState({
+        listallbeers: response.data
+      });
+    })
+    .catch(err => console.log(err))
+  }
+
   componentDidMount() {
     this.getAllbeers();
   }
+
   render() {
+    const filteredBeers = this.state.listallbeers.filter((eachbeer) => eachbeer.name.toLowerCase().includes(this.state.query.toLowerCase()));
+
     return (
       <>
-        {this.state.Listallbeers.map((eachbeer) => {
+        <input className='search' type="text" name="query" placeholder="Search" value={this.query} onChange={this.handleChange} />
+        {filteredBeers.map((eachbeer) => {
           return (
             <div key={eachbeer._id}>
-              <img src={eachbeer.image_url} />
+              <img src={eachbeer.image_url} alt='beerpic' />
               <h2>
                 <Link to={`/beers/${eachbeer._id}`}>{eachbeer.name}</Link>
               </h2>
@@ -34,4 +55,5 @@ class Allbeers extends React.Component {
     );
   }
 }
+
 export default Allbeers;

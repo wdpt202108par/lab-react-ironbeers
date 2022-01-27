@@ -3,9 +3,11 @@ import axios from 'axios';
 
 class Randombeer extends React.Component {
   state = {};
+
   componentDidMount() {
     this.getRandom();
   }
+
   getRandom = () => {
     axios
       .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
@@ -14,6 +16,7 @@ class Randombeer extends React.Component {
       })
       .catch((err) => console.log(err));
   };
+
   render() {
     return (
       <>

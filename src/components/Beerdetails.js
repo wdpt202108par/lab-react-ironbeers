@@ -3,9 +3,11 @@ import axios from 'axios';
 
 class Beerdetails extends React.Component {
   state = {};
+
   componentDidMount() {
     this.getDetails();
   }
+
   getDetails = () => {
     axios
       .get(
@@ -16,6 +18,7 @@ class Beerdetails extends React.Component {
       })
       .catch((err) => console.log(err));
   };
+
   render() {
     return (
       <>
