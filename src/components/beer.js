@@ -31,7 +31,16 @@ class Beer extends Component{
               {this.state.beers.map(el => {
                   return(
                     <div>
-                        {el.name}
+                        <article>
+                        <img src={el.image_url}/>
+                        </article>
+                        <article>
+                        <h1>{el.name}</h1>
+                        <p>
+                        {el.tagline}
+                        {el.contributed_by}
+                        </p>
+                        </article>
                     </div>
                   )
               })}
