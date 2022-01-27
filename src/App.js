@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import BeerList from "./components/BeerList";
 import SingleBeer from "./components/SingleBeer";
 import RandomBeer from "./components/RandomBeer";
+import NewBeer from "./components/NewBeer";
 import './App.css';
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
         <Route exact path="/beers" render={(routerProps) => <BeerList {...routerProps} beers={this.state.beers} />} />
         <Route path="/beers/:beerId" render={(routerProps) => <SingleBeer {...routerProps} beers={this.state.beers} />} />
         <Route path="/random-beer" component={RandomBeer}/>
+        <Route path="/new-beer" component={NewBeer} />
       </Switch>
       </div>
     );
