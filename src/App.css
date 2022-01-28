@@ -82,5 +82,30 @@ nav {
 .single-beer-container h6 {
   margin: 10px 20px;
   text-align: left;
+}
 
+.new-beer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-beer input,textarea {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.new-beer .submit {
+ background-color: #61dafb;
+ margin-top: 20px;
+ padding: 5px;
+}
+
+
+.new-beer label {
+  margin: 20px 20px 0 20px;
+  text-align: left;;
+  font-weight: 500;
+  font-size: 80%;
 }

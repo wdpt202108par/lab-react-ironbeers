@@ -24,8 +24,7 @@ class Home extends React.Component {
       </div>
       <div className="new-beer-container" >
         <img src={newBeerImage} alt="new beer"/>
-        <h1>New Beer</h1>
-
+        <h1><Link to="/new-beer">Random Beer</Link></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mi ipsum, varius a felis vitae, rutrum egestas augue. Fusce sem dolor, aliquet non est sit amet, hendrerit ornare dolor. Donec imperdiet aliquam quam a tincidunt. Etiam id accumsan nibh, vel placerat augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam magna magna, dictum ac lectus at, molestie bibendum quam. Morbi ac ante urna.</p>          
       </div>
 
