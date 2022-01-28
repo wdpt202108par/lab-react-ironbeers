@@ -36,3 +36,76 @@
     transform: rotate(360deg);
   }
 }
+
+.home-page {
+  margin: 10px;
+}
+
+nav {
+  background-color:#61dafb;
+  padding: 10px;
+}
+
+.beer-container img {
+  width: 10%;
+}
+
+.single-beer-container img {
+  width: 30%;
+  margin-top: 30px;
+}
+
+.single-beer-container .cols {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.single-beer-container .col-left {
+  text-align: left;
+}
+
+.single-beer-container .col-right {
+  text-align: right;
+}
+
+.single-beer-container h3 {
+  color: gray;
+}
+
+.single-beer-container p {
+  margin: 0px 20px;
+  text-align: left;
+}
+
+.single-beer-container h6 {
+  margin: 10px 20px;
+  text-align: left;
+}
+
+.new-beer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-beer input,textarea {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.new-beer .submit {
+ background-color: #61dafb;
+ margin-top: 20px;
+ padding: 5px;
+}
+
+
+.new-beer label {
+  margin: 20px 20px 0 20px;
+  text-align: left;;
+  font-weight: 500;
+  font-size: 80%;
+}
