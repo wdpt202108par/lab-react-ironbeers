@@ -43,8 +43,44 @@
 
 nav {
   background-color:#61dafb;
+  padding: 10px;
 }
 
 .beer-container img {
   width: 10%;
+}
+
+.single-beer-container img {
+  width: 30%;
+  margin-top: 30px;
+}
+
+.single-beer-container .cols {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.single-beer-container .col-left {
+  text-align: left;
+}
+
+.single-beer-container .col-right {
+  text-align: right;
+}
+
+.single-beer-container h3 {
+  color: gray;
+}
+
+.single-beer-container p {
+  margin: 0px 20px;
+  text-align: left;
+}
+
+.single-beer-container h6 {
+  margin: 10px 20px;
+  text-align: left;
+
 }

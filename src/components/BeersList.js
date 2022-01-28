@@ -28,13 +28,13 @@ class BeersList extends React.Component {
           this.state.beers.map( beer => {
             return (
               <div className="beer-container" key={beer._id}>
-              <img src={beer.image_url} alt=""></img>
-              <ul>
-                <Link to={`/beers/${beer._id}`}><li>{beer.name}</li></Link>
-                <li>{beer.tagline}</li>
-                <li>Created by: {beer.contributed_by}</li>
-              </ul>
-            </div>
+                <img src={beer.image_url} alt=""></img>
+                <ul>
+                  <Link to={`/beers/${beer._id}`}><li>{beer.name}</li></Link>
+                  <li>{beer.tagline}</li>
+                  <li>Created by: {beer.contributed_by}</li>
+                </ul>
+              </div>
             )})
         }
       </>
